@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estado_usuarios",
+  "info": {
+    "singularName": "estado-usuario",
+    "pluralName": "estado-usuarios",
+    "displayName": "EstadoUsuario"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "usuarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::usuario.usuario",
+      "mappedBy": "estado_usuario"
+    }
+  }
+}

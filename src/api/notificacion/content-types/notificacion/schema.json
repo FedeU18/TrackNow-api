@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notificacions",
+  "info": {
+    "singularName": "notificacion",
+    "pluralName": "notificacions",
+    "displayName": "Notificacion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::usuario.usuario",
+      "inversedBy": "notificacions"
+    },
+    "pedido": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pedido.pedido",
+      "inversedBy": "notificacions"
+    },
+    "tipo_notificacion": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tipo-notificacion.tipo-notificacion",
+      "inversedBy": "notificacions"
+    }
+  }
+}
