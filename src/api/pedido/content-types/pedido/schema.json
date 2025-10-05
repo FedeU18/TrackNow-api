@@ -30,7 +30,14 @@
       "inversedBy": "pedido_repartidor"
     },
     "estado": {
-      "type": "string"
+      "type": "enumeration",
+      "default": "Pendiente",
+      "enum": [
+        "Pendiente",
+        "En curso",
+        "Entregado",
+        "Cancelado"
+      ]
     },
     "fecha_creacion": {
       "type": "datetime"

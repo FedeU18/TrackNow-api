@@ -389,7 +389,10 @@ export interface ApiPedidoPedido extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     direccion_destino: Schema.Attribute.String;
     direccion_origen: Schema.Attribute.String;
-    estado: Schema.Attribute.String;
+    estado: Schema.Attribute.Enumeration<
+      ['Pendiente', 'En curso', 'Entregado', 'Cancelado']
+    > &
+      Schema.Attribute.DefaultTo<'Pendiente'>;
     fecha_creacion: Schema.Attribute.DateTime;
     fecha_entrega: Schema.Attribute.DateTime;
     id_cliente: Schema.Attribute.Relation<
