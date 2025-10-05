@@ -74,6 +74,18 @@
     },
     "phone": {
       "type": "string"
+    },
+    "pedido_cliente": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pedido.pedido",
+      "mappedBy": "id_cliente"
+    },
+    "pedido_repartidor": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pedido.pedido",
+      "mappedBy": "id_repartidor"
     }
   }
 }
