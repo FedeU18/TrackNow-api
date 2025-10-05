@@ -86,6 +86,9 @@
       "relation": "oneToMany",
       "target": "api::pedido.pedido",
       "mappedBy": "id_repartidor"
+    },
+    "rol": {
+      "type": "string"
     }
   }
 }
